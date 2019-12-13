@@ -24,6 +24,10 @@ function updateInventory(currentArr, newArr) {
       return updatedArr
     }
 
+    function addItem(newItem) {
+      finalArr << newItem
+    }
+
     const currentInvNames = currentArr.map(item => item[1])
     console.log(currentInvNames)
 
@@ -32,6 +36,8 @@ function updateInventory(currentArr, newArr) {
 
       if (currentInvNames.includes(newItem[1])) {
         finalArr = updateItem(newItem[1], newItem)
+      } else {
+        addItem(newItem)
       }
     })
   return finalArr
@@ -53,4 +59,4 @@ var newInv = [
     [7, "Toothpaste"]
 ];
 
-console.log(updateInventory(currentInv, newInv));
+console.log(updateInventory([[21, "Bowling Ball"], [2, "Dirty Sock"], [1, "Hair Pin"], [5, "Microphone"]], [[2, "Hair Pin"], [3, "Half-Eaten Apple"], [67, "Bowling Ball"], [7, "Toothpaste"]]));
