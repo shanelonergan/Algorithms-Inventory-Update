@@ -8,7 +8,7 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 // algo
 
 function updateInventory(currentArr, newArr) {
-    // All inventory must be accounted for or you're fired!
+    
     let finalArr = []
 
     function updateItem(name, newItem) {
