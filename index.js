@@ -25,7 +25,7 @@ function updateInventory(currentArr, newArr) {
     }
 
     function addItem(newItem) {
-      finalArr << newItem
+      finalArr.push(newItem)
     }
 
     const currentInvNames = currentArr.map(item => item[1])
@@ -37,6 +37,7 @@ function updateInventory(currentArr, newArr) {
       if (currentInvNames.includes(newItem[1])) {
         finalArr = updateItem(newItem[1], newItem)
       } else {
+        console.log('adding')
         addItem(newItem)
       }
     })
