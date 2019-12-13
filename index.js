@@ -10,12 +10,16 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 function updateInventory(currentArr, newArr) {
     // All inventory must be accounted for or you're fired!
     function updateItem(name, newItem) {
-      updatedArr = currentArr.map(item => {
+      const updatedArr = currentArr.map(item => {
         if (item[1] === name) {
-         
           item[0] += newItem[0]
+          return item
+        } else {
+          return item
         }
         })
+
+      return updatedArr
     }
 
     const currentInvNames = currentArr.map(item => item[1])
