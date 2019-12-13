@@ -9,6 +9,8 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 function updateInventory(currentArr, newArr) {
     // All inventory must be accounted for or you're fired!
+    let finalArr = []
+
     function updateItem(name, newItem) {
       const updatedArr = currentArr.map(item => {
         if (item[1] === name) {
@@ -29,10 +31,10 @@ function updateInventory(currentArr, newArr) {
 
 
       if (currentInvNames.includes(newItem[1])) {
-        console.log(updateItem(newItem[1], newItem), 27)
+        finalArr = updateItem(newItem[1], newItem)
       }
     })
-
+  return finalArr
     
 }
 
