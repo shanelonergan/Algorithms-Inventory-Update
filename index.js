@@ -8,8 +8,7 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 // algo
 
 function updateInventory(currentArr, newArr) {
-    
-    let finalArr = []
+
 
     function updateItem(name, newItem) {
       const updatedArr = currentArr.map(item => {
