@@ -12,16 +12,13 @@ function updateInventory(currentArr, newArr) {
     let finalArr = []
 
     function updateItem(name, newItem) {
-      const updatedArr = currentArr.map(item => {
-        if (item[1] === name) {
-          item[0] += newItem[0]
-          return item
-        } else {
-          return item
-        }
-        })
+      const item = currentArr.filter(item => item[1] === name)
+      console.log(item)
 
-      return updatedArr
+      item[0] += newItem[0]
+      console.log(item, 16)
+
+      return item
     }
 
     function addItem(item, arr) {
@@ -34,7 +31,8 @@ function updateInventory(currentArr, newArr) {
     newArr.forEach(newItem => {
 
       if (currentInvNames.includes(newItem[1])) {
-        currentArr = updateItem(newItem[1], newItem)
+        const item = updateItem(newItem[1], newItem)
+        
       } else {
         addItem(newItem, currentArr) 
       }
