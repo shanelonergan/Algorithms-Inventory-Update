@@ -8,8 +8,6 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 // algo
 
 function updateInventory(currentArr, newArr) {
-
-
     function updateItem(name, newItem) {
       const updatedArr = currentArr.map(item => {
         if (item[1] === name) {
@@ -24,8 +22,8 @@ function updateInventory(currentArr, newArr) {
       return updatedArr
     }
 
-    function addItem(item, arr) {
-      arr.push(item)
+    function addItem(item) {
+      currentArr.push(item)
     }
 
     const currentInvNames = currentArr.map(item => item[1])
@@ -37,7 +35,7 @@ function updateInventory(currentArr, newArr) {
         const item = updateItem(newItem[1], newItem)
         
       } else {
-        addItem(newItem, currentArr) 
+        addItem(newItem) 
       }
 
       console.log(currentArr, 43)
