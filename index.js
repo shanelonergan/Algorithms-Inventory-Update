@@ -12,6 +12,13 @@ function updateInventory(currentArr, newArr) {
     const currentInvNames = currentArr.map(item => item[1])
     console.log(currentInvNames)
 
+    newArr.forEach(item => {
+      currentItemIndex = currentArr.filter(findItem)
+      if (currentInvNames.includes(item[1])) {
+        currentArr[0] = currentArr[0] + item[0] 
+      }
+    })
+
     
 }
 
