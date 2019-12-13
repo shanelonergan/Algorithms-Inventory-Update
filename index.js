@@ -12,13 +12,17 @@ function updateInventory(currentArr, newArr) {
     let finalArr = []
 
     function updateItem(name, newItem) {
-      const item = currentArr.filter(item => item[1] === name)
-      console.log(item)
+      const updatedArr = currentArr.map(item => {
+        if (item[1] === name) {
 
-      item[0] += newItem[0]
-      console.log(item, 16)
+          item[0] += newItem[0]
+          return item
+        } else {
+          return item
+        }
+        })
 
-      return item
+      return updatedArr
     }
 
     function addItem(item, arr) {
