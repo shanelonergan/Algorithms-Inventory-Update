@@ -39,7 +39,12 @@ function updateInventory(currentArr, newArr) {
 
       console.log(currentArr, 43)
     })
-  return currentArr
+
+    currentArr.sort(function(a, b) {
+      return a[1] > b[1] ? 1 : -1
+    })
+
+    return currentArr
     
 }
 
