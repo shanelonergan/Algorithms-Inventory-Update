@@ -7,10 +7,12 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 // algo
 
-function updateInventory(arr1, arr2) {
+function updateInventory(currentArr, newArr) {
     // All inventory must be accounted for or you're fired!
-    const currentInvNames = currentInv.map(item => item[1])
+    const currentInvNames = currentArr.map(item => item[1])
     console.log(currentInvNames)
+
+    
 }
 
 // Example inventory lists
