@@ -19,7 +19,7 @@ function updateInventory(currentArr, newArr) {
     console.log(currentInvNames)
 
     newArr.forEach(item => {
-      currentItemIndex = findItem(item[1])
+      const currentItemIndex = findItem(item[1])
 
       if (currentInvNames.includes(item[1])) {
         currentArr[0] = currentArr[0] + item[0] 
