@@ -48,8 +48,8 @@ function updateInventory(currentArr, newArr) {
       console.log(currentArr, 43)
     })
 
-    currentArr.sort(function(a, b) {
-      return a[1] > b[1] ? 1 : -1
+    currentArr.sort(function(currentItem, nextItem) {
+      return currentItem[1] > nextItem[1] ? 1 : -1
     })
 
     return currentArr
