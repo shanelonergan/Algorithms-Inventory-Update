@@ -8,14 +8,20 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 // algo
 
 function updateInventory(currentArr, newArr) {
+
     function updateItem(name, newItem) {
+
       const updatedArr = currentArr.map(item => {
+        
         if (item[1] === name) {
 
           item[0] += newItem[0]
           return item
+
         } else {
+
           return item
+
         }
         })
 
@@ -23,11 +29,12 @@ function updateInventory(currentArr, newArr) {
     }
 
     function addItem(item) {
+
       currentArr.push(item)
+
     }
 
     const currentInvNames = currentArr.map(item => item[1])
-    console.log(currentInvNames)
 
     newArr.forEach(newItem => {
 
