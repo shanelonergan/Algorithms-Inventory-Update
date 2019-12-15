@@ -18,6 +18,7 @@ function updateInventory(currentArr, newArr) {
   console.log(inventory, 'inventory')
   console.log(inventory2, 'inventory2')
 
+  // loop through new delivery (arr2)
 
   // /test
 
