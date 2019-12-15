@@ -11,10 +11,13 @@ function updateInventory(currentArr, newArr) {
 
   // testing alternate solutions
 
-  const inventory = Array.prototype.concat.apply([], currentArr); // converts to 1d array 
+  const inventory = Array.prototype.concat.apply([], currentArr); 
+  // converts to 1d array. apply calls a function with an array as the paramater values
   const inventory2 = [].concat.apply([], currentArr); // this is the same
+  
   console.log(inventory, 'inventory')
   console.log(inventory2, 'inventory2')
+
 
   // /test
 
