@@ -9,6 +9,13 @@ appDiv.innerHTML = `<h1>JS Starter</h1>`;
 
 function updateInventory(currentArr, newArr) {
 
+  // testing alternate solutions
+
+  const inventory = Array.prototype.concat.apply([], currentArr); // converts to 1d array 
+  console.log(inventory, 'inventory')
+
+  // /test
+
     function updateItem(name, newItem) {
 
       const updatedArr = currentArr.map(item => {
